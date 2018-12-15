@@ -1,0 +1,17 @@
+[user]
+	name = theArcticOcean
+	email = wei_yang1994@163.com
+[color]
+    ui = auto
+[commit]
+    template = ~/Documents/COMMIT_TEMPLATE_FILE
+[core]
+    editor = vim
+[alias]
+    ct = commit
+    ca = commit -a
+    st = status
+    pl = pull
+    ps = push
+    df = diff
+    tree = log --graph --decorate --pretty=format:'%C(red)%h%C(yellow)%d%C(reset) %s %C(green)(%an<%ae>, %cd)%C(reset)' --abbrev-commit --date=local
