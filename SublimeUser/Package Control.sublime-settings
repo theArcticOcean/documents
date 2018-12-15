@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Codecs33",
+		"ConvertToUTF8",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"Theme - Spacegray"
+	]
+}

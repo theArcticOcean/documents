@@ -1,0 +1,4 @@
+{
+	"shell_cmd": "vtk \"$file\"",
+	"selector": "source.tcl"
+}
