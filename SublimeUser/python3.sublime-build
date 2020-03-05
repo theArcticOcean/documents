@@ -1,0 +1,5 @@
+python3.sublime-build
+{
+	"shell_cmd": "python3 \"$file\"",
+	"selector": "source.py"
+}
