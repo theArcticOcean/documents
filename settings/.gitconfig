@@ -7,6 +7,9 @@
     template = ~/Documents/COMMIT_TEMPLATE_FILE
 [core]
     editor = vim
+    whitespace = cr-at-eol
+    editor = vim
+    pager = less -x1,5
 [alias]
     ct = commit
     ca = commit -a
@@ -14,4 +17,5 @@
     pl = pull
     ps = push
     df = diff
+    slog = log --pretty=format:'%h %an [%s]'
     tree = log --graph --decorate --pretty=format:'%C(red)%h%C(yellow)%d%C(reset) %s %C(green)(%an<%ae>, %cd)%C(reset)' --abbrev-commit --date=local
