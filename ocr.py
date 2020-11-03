@@ -45,6 +45,7 @@ if __name__ == "__main__":
     (h, w) = image.shape[:2]
     if w < 800:
         image = image_resize( image, width = 800 )
+    (h, w) = image.shape[:2]
     if h < 800:
         image = image_resize( image, height = 800 )
 
