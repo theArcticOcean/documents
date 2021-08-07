@@ -1,0 +1,49 @@
+# System-wide .profile for sh(1)
+
+if [ -x /usr/libexec/path_helper ]; then
+    eval `/usr/libexec/path_helper -s`
+fi
+
+if [ "${BASH-no}" != "no" ]; then
+    [ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:/Applications/CMake.app/Contents/bin
+export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/MacOS
+export PATH=$PATH:/Applications/Qt\ Creator.app/Contents/MacOS
+export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS
+export PATH=$PATH:/Users/weiyang/Downloads/ffmpeg
+export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS/firefox
+export PATH=$PATH:$QT_INSTALL_PATH
+export PATH=$PATH:/Users/weiyang/Downloads/emsdk
+export PATH=$PATH:/Users/weiyang/Downloads/emsdk/upstream/emscripten
+export PATH=$PATH:/Users/weiyang/Downloads/emsdk/node/14.15.5_64bit/bin
+export TERM="screen-256color"
+export WAFDIR=/Users/weiyang/Downloads/waf-2.0.8
+#alias python=python3
+if [ -f `which powerline-daemon` ]; then
+    #powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+else
+    echo "powerline-daemon don't run"
+fi
+
+alias mysql=/usr/local/mysql/bin/mysql
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:"/usr/local/Cellar/glib/2.56.0/include/glib-2.0/"
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:"/usr/local/Cellar/glib/2.56.0/lib/glib-2.0/include/"
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:"/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/"
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:"/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/"
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:"/Users/weiyang/Downloads/emsdk/upstream/emscripten/system/include/"
+export TCLLIBPATH=/Users/weiyang/Downloads/VTK-9.0.1/Wrapping/Tcl
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages":"/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework":"/Users/weiyang/Downloads/VTK-9.0.1/lib":"/Users/weiyang/Downloads/VTK-9.0.1/Wrapping/Python":"/usr/local/lib/python3.8/site-packages"
+export DYLD_FRAMEWORK_PATH="/Applications/Qt Creator.app/Contents/Frameworks/:/usr/local/Qt-5.15.1/lib/"
+export DYLD_LIBRARY_PATH="/usr/local/Qt-5.15.1/lib"
+export DYLD_LIBRARY_PATH="/Users/weiyang/Downloads/OpenCTM-1.0.3/lib":${DYLD_LIBRARY_PATH}
+
+export LD_LIBRARY_PATH="/usr/local/lib"
+export LD_LIBRARY_PATH="/Users/weiyang/Downloads/VTK-9.0.1/lib":${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH="/usr/local/lib/python2.7/site-packages/vtk":${LD_LIBRARY_PATH}
+export CMAKE_TOOLCHAIN_FILE="/Users/weiyang/Downloads/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
